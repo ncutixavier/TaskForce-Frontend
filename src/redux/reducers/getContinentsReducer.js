@@ -1,7 +1,7 @@
 import { GET_CONTINENTS_FAIL, GET_CONTINENTS_REQUEST, GET_CONTINENTS_SUCCESS } from '../types'
 
 const initialState = {
-    loading: 'block',
+    loading: false,
     data: [],
     error: ''
 }
@@ -16,17 +16,17 @@ const getContinentsReducer = (state = initialState, action) => {
         case GET_CONTINENTS_REQUEST:
             return {
                 ...state,
-                loading: 'block'
+                loading: true
             }
         case GET_CONTINENTS_SUCCESS:
             return {
-                loading: 'none',
+                loading: false,
                 data: action.payload,
                 error: ''
             }
         case GET_CONTINENTS_FAIL:
             return {
-                loading: 'none',
+                loading: false,
                 data: [],
                 error: action.payload
             }

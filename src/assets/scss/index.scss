@@ -21,7 +21,7 @@
                 background-color: #1e776e;
                 color: #fff;
                 font-family: "Roboto";
-                font-weight: 600;
+                font-weight: normal;
                 text-transform: uppercase;
                 padding: 0.5rem 1.3rem;
                 border-radius: 6px;
@@ -52,7 +52,7 @@
         .home-data {
             font-family: "Roboto";
             text-align: center;
-            width: 60%;
+            width: 65%;
             background-color: #1e776e;
             margin: auto;
             border-radius: 8px 8px 0px 0px;
@@ -74,6 +74,7 @@
             display: flex;
             justify-content: center;
             margin: 2rem 0;
+
             .input-container {
                 background-color: #fff;
                 display: flex;
@@ -127,23 +128,166 @@
     .home-country-data {
         font-family: "Roboto";
         text-align: center;
-        width: 60%;
+        width: 65%;
         background-color: #fff;
         margin: auto;
         border-radius: 0px 0px 8px 8px;
         padding: 20px;
         box-shadow: 0px 3px 16px #0000001f;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
 
-        div {
-            color: #2fc8b8;
-            font-size: 50px;
-            font-weight: normal;
+        .stats {
+            .stats-today {
+                color: #2fc8b8;
+                font-size: 23px;
+            }
+            .stats-text {
+                line-height: 3;
+                font-weight: 800;
+                font-size: 15px;
+            }
+            .stats-total {
+                color: #888888;
+                font-size: 15px;
+            }
+        }
+    }
+}
+
+.continents-card {
+    font-family: "Roboto";
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    overflow-x: hidden;
+    width: 100%;
+    margin: 0 0 4rem;
+
+    .card {
+        min-width: 500px;
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+        margin: 0 1.5rem 1.3rem;
+        display: flex;
+        border-radius: 8px;
+
+        .right-card {
+            background-color: #2fc8b8;
+            width: 100%;
+            border-top-right-radius: 8px;
+            border-bottom-right-radius: 8px;
+            .right-stats {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                padding: 10px;
+                border-bottom: 1px solid #a1a0a0;
+
+                .stats-today {
+                    color: #fff;
+                    font-size: 25px;
+                    font-weight: 200;
+                }
+
+                .stats-text {
+                    font-weight: 600;
+                    font-size: 13px;
+                    line-height: 3;
+                }
+
+                .stats-total {
+                    color: #fff;
+                    font-size: 13px;
+                }
+            }
         }
 
-        span {
-            color: #fff;
-            font-size: 13px;
+        .right-stats:nth-child(3) {
+            border-bottom: none;
         }
+
+        .left-card {
+            background-color: #fff;
+            width: 100%;
+            padding: 1rem 0 1rem 1rem;
+            border-top-left-radius: 8px;
+            border-bottom-left-radius: 8px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+            .card-stats {
+                margin: 4rem 0;
+                text-align: center;
+
+                .card-stats-total {
+                    font: normal normal 300 40px Roboto;
+                    letter-spacing: 0px;
+                    color: #2fc8b8;
+                    opacity: 1;
+                }
+
+                .card-stats-text {
+                    font: normal normal bold 16px/19px Roboto;
+                    letter-spacing: 0px;
+                    color: #000000;
+                    opacity: 1;
+                }
+            }
+
+            .card-total {
+                color: #888888;
+            }
+            .card-name {
+                font: normal normal bold 25px Bebas Neue;
+                letter-spacing: 0px;
+                color: #000000;
+                opacity: 1;
+            }
+        }
+    }
+}
+
+.card-btn {
+    background-color: #1e776e;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 16px;
+    border-radius: 50%;
+    border: none;
+    cursor: pointer;
+
+    &:hover {
+        background-color: #185f58;
+    }
+
+    img {
+        width: 100%;
+    }
+}
+
+.continents {
+    position: relative;
+    .btn-right {
+        position: absolute;
+        left: 82%;
+        top: 58%;
+
+        img{
+            transform: rotate(180deg);
+        }
+    }
+
+    .btn-left {
+        position: absolute;
+        left: 18%;
+        top: 58%;
     }
 }
 

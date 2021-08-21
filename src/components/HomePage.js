@@ -4,6 +4,39 @@ import ReactFlagsSelect from 'react-flags-select';
 
 const HomePage = () => {
     const [selected, setSelected] = useState('');
+
+    const stats = [
+        {
+            today: '11,270',
+            text: 'Tests',
+            total: '2,188,881'
+        },
+        {
+            today: '619',
+            text: 'Positive cases',
+            total: '4,254'
+        },
+        {
+            today: '20',
+            text: 'Hospitalized',
+            total: '1,886'
+        },
+        {
+            today: '19',
+            text: 'Recovered',
+            total: '88,881'
+        },
+        {
+            today: '9',
+            text: 'Deaths',
+            total: '920'
+        },
+        {
+            today: '48,660',
+            text: 'Vaccinated',
+            total: '729,130'
+        }
+    ]
     return (
         <div className="home-page">
             <div className="home-top-page">
@@ -46,8 +79,13 @@ const HomePage = () => {
                 </div>
             </div>
             <div className="home-country-data">
-                <div className="">2,188,881</div>
-                <span>Cumulatively</span>
+                {stats.map(item => (
+                    <div className="stats" key={item.text}>
+                        <div className="stats-today">{item.today}</div>
+                        <div className="stats-text">{item.text}</div>
+                        <div className="stats-total">{item.total}</div>
+                    </div>
+                ))}
             </div>
         </div>
     )
