@@ -3,7 +3,7 @@ import { Link } from "react-scroll";
 import ReactFlagsSelect from 'react-flags-select';
 
 const HomePage = () => {
-    const [selected, setSelected] = useState('');
+    const [selected, setSelected] = useState('Rwanda');
 
     const stats = [
         {
@@ -62,6 +62,7 @@ const HomePage = () => {
                     <div className="input-container">
                         <div className="country-input">
                             <ReactFlagsSelect
+                                searchable
                                 selected={selected}
                                 onSelect={code => setSelected(code)}
                             />
