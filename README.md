@@ -2,11 +2,11 @@
 
 ## How to test the project locally
 
-- Clone the [https://github.com/ncutixavier/TaskForce-Frontend.git](repository)
+- Clone the [repository](https://github.com/ncutixavier/TaskForce-Frontend.git)
 - Run `npm install` to install packages
 - Run `npm start`
 - Open [http://localhost:3000](http://localhost:3000)
 
 ## How to test the project remotely
 
-- [https://taskforce-frontend.herokuapp.com/](Production Link)
+- [Production Link](https://taskforce-frontend.herokuapp.com/)
